@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulario</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1 style="text-align: center;">Encuesta privada</h1>
+        <h2>Rellena los datos indicados y pulsa enviar</h2>
+        <form method="post" action="/Ejercicio3/ServletDespacha">
+            <p>Introduce tu nombre: <input type="text" maxlength="35" name="nombre" required> </p>
+            <p>Introduce tus apellidos: <input type="text" maxlength="45" name="apellidos" required> </p>
+            <p>Teclea tu número de teléfono: <input type="text" maxlength="9" name="telefono" required> </p>
+            <p>Introduce tu ciudad de nacimiento: <input type="text" maxlength="45" name="ciudad" required> </p>
+            <p>Sexo:</p>
+            <label>
+                <input type="radio" name="sexo" value="mujer" required> Mujer
+            </label>
+            <label>
+                <input type="radio" name="sexo" value="hombre" required> Hombre
+            </label>
+            <br><br>
+            
+            <label for="pais">Selecciona tu país:</label>
+            <select id="pais" name="pais" required>
+                <option value="" disabled selected>-- Selecciona un país --</option>
+                <option value="argentina">Argentina</option>
+                <option value="brasil">Brasil</option>
+                <option value="chile">Chile</option>
+                <option value="mexico">México</option>
+                <option value="españa">España</option>
+                <option value="francia">Francia</option>
+                <option value="italia">Italia</option>
+                <option value="eeuu">Estados Unidos</option>
+                <option value="canada">Canadá</option>
+            </select><br><br>
+            
+            <h3 style="color: red;">Selecciona tus actividades de ocio favoritas</h3>
+            <label>
+                <input type="checkbox" name="actividades" value="parapente"> Parapente
+            </label><br>
+            <label>
+                <input type="checkbox" name="actividades" value="ala_delta"> Ala Delta
+            </label><br>
+            <label>
+                <input type="checkbox" name="actividades" value="submarinismo"> Submarinismo
+            </label><br>
+            <label>
+                <input type="checkbox" name="actividades" value="esqui"> Esquí
+            </label><br><br>
+            
+            <h3 style="color: red;">Comentarios sobre la página</h3>
+            <textarea id="comentario" name="comentario" placeholder="Escribe aquí..."></textarea>
+            <br><br>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar">
+        </form>
+    </body>
+</html>
