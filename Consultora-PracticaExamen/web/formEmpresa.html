@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>AÑADIR EMPRESA</h1>
+        <form action="/Consultora-PracticaExamen/ServletEmpresa" method="post">
+            <p>
+                Nombre de la empresa: <input type="text" name="nombre" required>
+                CIF: <input type="text" name="cif" required>
+            </p>
+            <p>
+                Representante legal de la empresa: <input type="text" name="representante" required>
+                NIF: <input type="text" name="nif" required>
+            </p>
+            <p>
+                Sector: <input type="radio" name="sector" value="alimentacion" required>  Alimentacion
+                <input type="radio" name="sector" value="textil"> Textil
+                <input type="radio" name="sector" value="transporte"> Transporte
+                <input type="radio" name="sector" value="medicina"> Medicina
+            </p>
+            <p>
+                Telefono: <input type="text" name="telefono" required>
+                Email: <input type="text" name="email" required>
+            </p>
+            <p> Volumen de ventas anuales: <input type="text" name="volumen" required> </p>
+            <p> Observaciones:</p>
+            <textarea name="observaciones"></textarea>
+            <br><br>
+            <button type="submit"> Añadir empresa </button>
+            <button type="reset"> Borrar empresa </button>
+        </form>
+        <br>
+        <a href="listado.jsp"> <button type="reset"> Listado de empresas </button> </a>
+    </body>
+</html>

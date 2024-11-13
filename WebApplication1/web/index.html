@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>GESTION DE RESERVAS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="/WebApplication1/ServletValida" method="post">
+            <h1>GESTION DE RESERVAS</h1>
+            <h3> Datos personales </h3>
+            <p> Nombre: <input type="text" name="nombre" required> </p>
+            <p> Apellidos: <input type="text" name="apellidos" required> </p>
+            <p> DNI: <input type="text" name="dni" required> </p>
+            <p> SS: <input type="text" name="ss" required> </p>
+            <p> Telefono: <input type="text" name="telefono" required> </p>
+            <p> Email: <input type="text" name="email"> </p>
+            <p>Provincia:  <select name="provincia" required>
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="sevilla"> Sevilla </option>
+                <option value="cadiz"> Cadiz </option>
+                <option value="almeria"> Almeria </option>
+            </select></p>
+
+            <h3> Datos de la reserva </h3>
+            <p> Fecha de entrada: <input type="date" name="entrada" required> </p>
+            <p> Fecha de salida <input type="date" name="salida" required> </p>
+            <p> Regimen de alojamiento:
+                <input type="radio" name="regimen" value="media"> Media pension
+                <input type="radio" name="regimen" value="completa" required> Pension Completa
+            </p>
+            <p>Sevicios extra incluidos:</p>
+                <p><input type="checkbox" name="servicios" value="coche"> Coche de alquiler</p>
+                <p><input type="checkbox" name="servicios" value="excursiones"> Excursiones</p>
+                <p><input type="checkbox" name="servicios"  value="espectaculos"> Espectaculos</p>
+                <p><input type="checkbox" name="servicios"  value="gimnasio"> Gimnasio</p>
+                <p><input type="checkbox" name="servicios"  value="spa"> SPA</p>
+
+            <button type="submit"> Añadir reserva </button>
+            <button type="reset"> Borrar reserva </button>
+        </form>
+        <br>
+        <a href="listado.jsp"><input type="button" value="Ver Reservas"></a>
+    </body>
+</html>
